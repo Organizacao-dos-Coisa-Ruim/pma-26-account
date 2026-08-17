@@ -1,0 +1,133 @@
+### Maven ###
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.flattened-pom.xml
+
+### Gradle (caso migre) ###
+.gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Java / JVM ###
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+!.mvn/wrapper/maven-wrapper.jar
+hs_err_pid*
+replay_pid*
+*.hprof
+core
+
+### Spring Boot - config local e segredos ###
+# Config versionada fica em application.properties / application-<profile>.properties.
+# Overrides locais e credenciais NAO entram no repo.
+application-local.properties
+application-local.yml
+application-local.yaml
+*-local.properties
+*-local.yml
+*-local.yaml
+application-secret*.properties
+application-secret*.y*ml
+.env
+.env.*
+!.env.example
+!.env.sample
+secrets.properties
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+*.truststore
+
+### Logs ###
+logs/
+*.log
+*.log.*
+spring.log
+
+### Testes / cobertura ###
+.jacoco/
+jacoco.exec
+*.exec
+/coverage/
+surefire-reports/
+failsafe-reports/
+allure-results/
+.attach_pid*
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### Eclipse / STS ###
+.apt_generated/
+.apt_generated_test/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+### Sistema operacional ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*~
+.nfs*
+
+### Ferramentas ###
+HELP.md
+*.orig
+*.rej
+*.bak
+*.tmp
+*.swp
+*.swo
+.sonar/
+.scannerwork/
+node_modules/
