@@ -3,11 +3,11 @@ package pma.account;
 import lombok.Builder;
 
 @Builder
-public record AccountIn(
+public record AccountOut(
 
+    String id,
     String name,
-    String email,
-    String password
+    String email
 
 ) {
 
