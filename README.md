@@ -22,7 +22,16 @@ Precisa ser feito **antes** de buildar o `account-service` (ou qualquer serviço
 | `POST` | `/accounts/login` | `LoginIn {email, password}` | `200` + `AccountOut` · `401` credenciais inválidas |
 | `GET` | `/accounts/health-check` | – | `200` |
 
-`AccountOut` nunca traz a senha.
+`AccountOut {id, name, email, role}` nunca traz a senha. `role` é `user` ou `admin` (constantes `AccountOut.ROLE_USER` / `ROLE_ADMIN`).
+
+### Quem pode chamar (via gateway)
+
+| Rota | Quem |
+|------|------|
+| `GET /accounts`, `DELETE /accounts/{id}`, `POST /accounts`, `POST /accounts/login` | só `admin` (o gateway devolve `403` para os outros) |
+| `GET /accounts/{id}` | a própria conta ou `admin` (o account-service devolve `403` para os outros) |
+
+Chamadas internas, como a do Auth via Feign, não passam pelo gateway e não têm essas restrições.
 
 ## Usando como cliente Feign (ex.: no Auth)
 
